@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VARIABLES</title>
+</head>
+<body>
+  <script>
+    /*
+      Variable name restrictions:
+      1. Can't use special words Example: let
+      2. We can't start variable with a number
+      3. Can't use space in variables Example: let first name = Jabz  Correct way is let firstName = Jabz
+      4. Can't use special characters except: $ and _
+    */
+    let variable1 = 3; // This is called 'Assigning a value to a variable'
+    console.log(variable1); // Output = 3
+
+    let calculation = 2 + 2;
+    console.log(calculation); //Output = 4
+    console.log(calculation + 2); //Output = 6
+    console.log(`I have ${calculation} apples.`); // Output = I have 4 apples.
+
+
+    let result = calculation + 3;
+    console.log(result); //Output = 7
+
+    let message = 'Hello';
+    console.log(message); //Output = Hello
+
+    /*
+      Syntax Rules for Re-assigning a Value:
+      Don't use "let" when re-assigning because it is going to create a new variable and make an error
+    */
+
+    variable1 = 6; // This is called 'Re-assigning a value to a variable'
+    console.log(variable1); // Output = 6
+
+    variable1 = variable1 + 2;
+    console.log(variable1); // Output = 8
+  </script>
+</body>
+</html>
