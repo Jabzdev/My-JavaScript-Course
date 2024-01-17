@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <script>
+
+    /*
+      function = A section of reusable code.
+                 Declare code once, use it whenever you want.
+                 Call the function to execute that code. 
+      
+      Rules for function names:
+      1.Can't use special words Example: function.
+      2.We can't start variable with a number.
+      3.Can't use space in variables Example: function first name = Jabz. Correct way is function firstName = Jabz
+      4.Can't use special characters except: $ and _   
+      
+      return =  Gets a value out of a function.
+      parameter =  Puts a value into a function.
+
+      syntax rules for Parameters:
+      1.We create parameters between a bracket.
+      2.Parameter names follow the rules of variable names.
+      3.A parameter only exist inside the function scope.
+      4.A function can have more than 1 paremeter.
+    */
+
+    //Example 1
+    /*
+    function myHappyBirthday(name , age) {
+      console.log('Happy birthday to you');
+      console.log('Happy birthday to you');
+      console.log(`Happy birthday dear ${name}`);
+      console.log(`You are ${age} years old`);
+    }
+
+    myHappyBirthday('Jabz', 23);
+
+    //Example 2
+    function myNumber(x , y) {
+      return x * y;
+    }
+
+    console.log(myNumber(4, 3));
+    */
+    function calculateTax(cost, taxPercent = 0.2) {
+      console.log(cost * taxPercent);
+    }
+
+    calculateTax(2000, 0.2);
+    calculateTax(4000);
+  </script>
+</body>
+</html>
