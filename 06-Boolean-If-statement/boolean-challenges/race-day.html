@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race Day</title>
+</head>
+<body>
+  <script>
+    let raceNumber = Math.floor(Math.random() * 1000);
+
+    let age = 23;
+    let early = true;
+
+    if (early && age > 18) {
+      raceNumber += 1000;
+    }
+
+    if (early && age > 18) {
+      console.log(`You will race at 9:30, Your race number is ${raceNumber}.`);
+    }
+    else if (!early && age > 18) {
+      console.log(`You will race at 11:00, Your race number is ${raceNumber}.`);
+    }
+    else if (age < 18) {
+      console.log(`You will race at 12:30, Your race number is ${raceNumber}.`);
+    }
+    else {
+      console.log('Please go to the registration desk');
+    }
+  </script>
+</body>
+</html>
