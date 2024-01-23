@@ -30,7 +30,6 @@
     */
 
     //Example 1
-    /*
     function myHappyBirthday(name , age) {
       console.log('Happy birthday to you');
       console.log('Happy birthday to you');
@@ -46,13 +45,86 @@
     }
 
     console.log(myNumber(4, 3));
-    */
+
     function calculateTax(cost, taxPercent = 0.2) {
       console.log(cost * taxPercent);
     }
 
     calculateTax(2000, 0.2);
     calculateTax(4000);
+
+    //There are four ways to write a function
+
+    // 1
+    const squareNum = (num) => {
+      return num * num 
+    }
+    console.log(squareNum(6));
+
+    // 2
+    const squareNum2 = (num2) => num2 * num2;
+    console.log(squareNum2(5));
+
+    // 3
+    const squareNum3 = function(num3) {
+      return num3 * num3
+    }
+    console.log(squareNum3(7));
+
+    // 4
+    function squareNum4(num4) {
+      return num4 * num4
+    } 
+    console.log(squareNum4(8));
+
+    // GLOBAL SCOPE
+    // Example 1
+    const satellite = 'The Moon'
+    const galaxy = 'The Milky Way'
+    let stars = 'North Star'
+    function callMyNightSky() {
+      stars = 'Sirius'
+      return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+    }
+    console.log(callMyNightSky());
+    console.log(stars);
+
+
+    // Example 2
+    function callMyNightSky2(planet = 'mars', star = 'Red Giant', universe = 'Milky Way'){
+      return `Night Sky: ${planet}, ${star}, and ${universe}`;
+    }
+    console.log(callMyNightSky2('Earth', 'Sun', 'Black Hole'));
+
+    function callMyNightSky3() {
+      return callMyNightSky2();
+    } 
+    console.log(callMyNightSky3());
+
+
+    //BLOCK SCOPE
+    function logVisibleLightWaves() {
+      const lightWaves = 'Moonlight'
+      console.log(lightWaves);
+    }
+    logVisibleLightWaves(); //prints "Moonlight"
+    //console.log(lightWaves); //Error
+
+
+    //Example of scoping
+    const logVisibleLightWaves1 = () => {
+      let lightWaves = 'Moonlight';
+      let region = 'The Arctic';
+      // Add if statement here:
+      if (region === 'The Arctic') {
+        let lightWaves = 'Northern Lights'
+        console.log(lightWaves); //prints "Northern Lights"
+      }
+      
+      console.log(lightWaves); // prints "Moonlight"
+    };
+
+    logVisibleLightWaves1();
   </script>
 </body>
 </html>
